@@ -8,7 +8,8 @@ sap.ui.define([
         onInit: function(){
             var oData={
                 recipient:{
-                    name:'UI5'
+                    name:'UI5',
+                    description:'Description for UI5'
                 }
             }
             var oModel= new JSONModel(oData);
