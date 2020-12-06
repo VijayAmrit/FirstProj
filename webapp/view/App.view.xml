@@ -1,0 +1,10 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" controllerName="sap.ui.demo.FirstProj.controller.App">
+	<l:VerticalLayout class="sapUiContentPadding" width="100%">
+		<l:content>
+			<Label text="Product not editable" labelFor="InputNoEdit"/>
+			<Input id="InputNoEdit" class="sapUiSmallMarginBottom" type="Text" 
+                enabled="true" editable="true" value="{mainModel>/recipient/name}"/>
+            <Button text='Press' press=".onShowHello"></Button>    
+		</l:content>
+	</l:VerticalLayout>
+</mvc:View>
