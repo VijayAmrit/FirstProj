@@ -4,7 +4,7 @@
 			<Label text="Product not editable" labelFor="InputNoEdit"/>
 			<Input id="InputNoEdit" class="sapUiSmallMarginBottom" type="Text" 
                 enabled="true" editable="true" value="{mainModel>/recipient/name}" width="60%"/>
-            <Button text='Press' press=".onShowHello"></Button>    
+            <Button text='{i18n>showHellowButtonText}' press=".onShowHello"></Button>    
 		</l:content>
 	</l:VerticalLayout>
 </mvc:View>

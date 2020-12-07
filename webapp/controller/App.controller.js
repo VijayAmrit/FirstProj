@@ -18,7 +18,7 @@ sap.ui.define([
             this.getView().setModel(oModel, 'mainModel');
             // set i18n Model on view
             var i18nModel = new ResourceModel({
-                bundleName: 'sap.ui.demo.FirstProj.i18n.i18n.properties',
+                bundleName: 'sap.ui.demo.FirstProj.i18n.i18n',
                 supportedLocales: [''],
                 fallBackLocale:''
             });
