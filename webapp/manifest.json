@@ -5,25 +5,20 @@
 	
     "sap.app": {
         "_version": "1.1.0",
-        "id": "<id>",
+        "id": "sap.ui.demo.FirstProj",
         "type": "application",
-        "i18n": "sap.ui.demo.FirstProj.i18n.i18n.properties",
+        "i18n": "i18n/i18n.properties",
         "applicationVersion": {
-            "version": "<version>"
+            "version": "1.0.0"
         },
-        "title": "{{<title>}}",
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
         "tags": {
             "keywords": [
                 "{{<keyword1>}}", "{{<keyword2>}}"
             ]
         },
         "dataSources": {
-            "<dataSourceAlias>": {
-                "uri": "<uri>",
-                "settings": {
-                    "localUri": "<localUri>"
-                }
-            }
         }
     },
     "sap.ui": {
@@ -56,46 +51,60 @@
             ],
             "css": [
                 {
-                    "uri": "<uri>",
-                    "id": "<id>"
+                    "uri": "css/style.css"
                 }
             ]
         },
         "dependencies": {
-            "minUI5Version": "<minUI5Version>",
+            "minUI5Version": "1.60",
             "libs": {
-                "<ui5lib1>": {                   
-                    "minVersion": "<minVersion1>"
-                },
-                "<ui5lib2>": {                   
-                    "minVersion": "<minVersion2>"
-                }
-            },
-            "components": {
-                "<ui5component1>": {
-                    "minVersion": "<minComp1Version>"
-                }
+                "sap.m": {}
             }
+            
         },
         "models": {
             "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",                
-                "uri": "<uriRelativeToManifest>",
-                "setting":{
-                    "bundleName": "sap.ui.demo.FirstProj.i18n.i18n"
-                }                
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sap.ui.demo.FirstProj.i18n.i18n",
+                    "supportedLocales": [""],
+                    "fallbackLocale": ""
+                },
+                "uri": "<uriRelativeToManifest>"
+            },
+            "invoice": {
+                "dataSource": "invoiceRemote"
             },
             "": {
                 "dataSource": "<dataSourceAlias>",
                 "settings": {}
             }
         },
-        "rootView": "<rootView>",
+        "rootView": {
+            "viewName": "sap.ui.demo.FirstProj.view.App",
+            "type": "XML",
+            "async": true,
+            "id": "app"
+        },
         "handleValidation": false,
         "config": {
           
         },
         "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "sap.ui.demo.FirstProj.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+               
+            ],
+            "targets": {
+
+            }
           
         },
         "extends": {
@@ -104,8 +113,8 @@
 			"extensions": {}
         },
         "contentDensities": {
-            "compact": false,
-            "cozy": false
+            "compact": true,
+            "cozy": true
         }
     },
 
