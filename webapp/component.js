@@ -30,6 +30,7 @@ sap.ui.define([
                 supportedLocales: [''],
                 fallBackLocale:''
             });
+            //setting i18n model
             this.setModel(i18nModel, 'i18n');
         }
     })
